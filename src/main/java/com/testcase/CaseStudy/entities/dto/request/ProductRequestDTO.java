@@ -20,7 +20,6 @@ public class ProductRequestDTO {
 	private String name;
 	
 	@Lob
-	@NotBlank(message = "Descryption can not be blank")
 	private String descryption;
 	
 	
@@ -34,7 +33,7 @@ public class ProductRequestDTO {
 
 	public ProductRequestDTO(Long id,
 			@Size(min = 1, max = 75, message = "Category Name Size must be between 1 and 75") @NotNull(message = "Category Name can not be blank") String name,
-			@NotBlank(message = "Descryption can not be blank") String descryption,
+			 String descryption,
 			@NotNull(message = "Price can not be blank") Integer price) {
 		super();
 		this.id = id;

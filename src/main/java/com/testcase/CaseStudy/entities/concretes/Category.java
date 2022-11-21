@@ -36,7 +36,8 @@ public class Category {
 	 @ManyToMany(fetch = FetchType.LAZY,
 		      cascade = {
 		          CascadeType.PERSIST,
-		          CascadeType.MERGE
+		          CascadeType.MERGE,
+		          
 		      })
 		  @JoinTable(name = "category_products",
 		        joinColumns = { @JoinColumn(name = "category_id") },

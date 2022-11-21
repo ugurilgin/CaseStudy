@@ -8,8 +8,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -35,22 +37,22 @@ private ProductManager productManager;
 	}
 
 	@GetMapping("/{id}")
-	public ProductResponseDTO getOneById(Long id) {
+	public ProductResponseDTO getOneById(@PathVariable Long id) {
 		return productManager.getOneById(id);
 	}
 
 	@PostMapping
-	public ProductResponseDTO create(@Valid ProductRequestDTO newProduct) {
+	public ProductResponseDTO create(@Valid @RequestBody ProductRequestDTO newProduct) {
 		return productManager.create(newProduct);
 	}
 
 	@PutMapping("/{id}")
-	public ProductResponseDTO update(Long id, @Valid ProductRequestDTO newProduct) {
+	public ProductResponseDTO update(@PathVariable Long id, @Valid @RequestBody ProductRequestDTO newProduct) {
 		return productManager.update(id, newProduct);
 	}
 
 	@DeleteMapping("/{id}")
-	public ResponseEntity<?> deleteById(Long id) {
+	public ResponseEntity<?> deleteById(@PathVariable Long id) {
 		return productManager.deleteById(id);
 	}
 

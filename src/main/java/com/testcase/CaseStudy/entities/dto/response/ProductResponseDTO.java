@@ -1,6 +1,7 @@
 package com.testcase.CaseStudy.entities.dto.response;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import com.testcase.CaseStudy.entities.concretes.Category;
 import com.testcase.CaseStudy.entities.concretes.Products;
@@ -11,7 +12,7 @@ public class ProductResponseDTO {
 	private String name;
 	private String desc;
 	private Integer price;
-	private List<Category> category;
+	private List<CategoryResponseDTO> category;
 
 	public ProductResponseDTO() {
 		
@@ -23,7 +24,7 @@ public class ProductResponseDTO {
 		this.name = products.getName();
 		this.desc = products.getDesc();
 		this.price = products.getPrice();
-		this.category = products.getCategories().stream().toList();
+		this.category = products.getCategories().stream().map(category -> new CategoryResponseDTO(category)).collect(Collectors.toList());
 	}
 
 	public Long getId() {
@@ -58,11 +59,11 @@ public class ProductResponseDTO {
 		this.price = price;
 	}
 
-	public List<Category> getCategory() {
+	public List<CategoryResponseDTO> getCategory() {
 		return category;
 	}
 
-	public void setCategory(List<Category> category) {
+	public void setCategory(List<CategoryResponseDTO> category) {
 		this.category = category;
 	}
 

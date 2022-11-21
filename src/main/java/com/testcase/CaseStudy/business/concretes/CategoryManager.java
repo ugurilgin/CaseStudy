@@ -1,5 +1,6 @@
 package com.testcase.CaseStudy.business.concretes;
 
+import java.io.Console;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -16,6 +17,7 @@ import com.testcase.CaseStudy.dataAccess.repositories.ProductRepository;
 import com.testcase.CaseStudy.entities.concretes.Category;
 import com.testcase.CaseStudy.entities.concretes.Products;
 import com.testcase.CaseStudy.entities.dto.request.CategoryRequestDTO;
+import com.testcase.CaseStudy.entities.dto.request.ProductRequestDTO;
 import com.testcase.CaseStudy.entities.dto.response.CategoryResponseDTO;
 
 
@@ -62,7 +64,7 @@ public CategoryResponseDTO create(@Valid CategoryRequestDTO newCategory) {
 }
 
 
-public ResponseEntity<?> addProduct(Long id, @Valid Products newProduct) {
+public ResponseEntity<?> addProduct(Long id, @Valid ProductRequestDTO newProduct) {
 	if(id<=0) throw new EntityNotFoundException("Id can not be equal or lower than zero : " + id);
 	else {
 	Products products = categoryRepository.findById(id).map(category -> {
@@ -76,8 +78,8 @@ public ResponseEntity<?> addProduct(Long id, @Valid Products newProduct) {
 	        return _products;
 	      }
 	      // add and create new One
-	      category.addProduct(newProduct);
-	      return productRepository.save(newProduct);
+	      category.addProduct(new Products(newProduct) );
+	      return productRepository.save(new Products(newProduct));
 	      
 	    }).orElseThrow(() -> new EntityNotFoundException("Category Not found  with id = " + id));
 	return new ResponseEntity<>(products, HttpStatus.CREATED);

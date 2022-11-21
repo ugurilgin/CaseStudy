@@ -1,5 +1,6 @@
 package com.testcase.CaseStudy.business.concretes;
 
+import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -10,7 +11,9 @@ import org.springframework.stereotype.Service;
 
 import com.testcase.CaseStudy.business.abstracts.ProductService;
 import com.testcase.CaseStudy.core.exceptions.EntityNotFoundException;
+import com.testcase.CaseStudy.dataAccess.repositories.CategoryRepository;
 import com.testcase.CaseStudy.dataAccess.repositories.ProductRepository;
+import com.testcase.CaseStudy.entities.concretes.Category;
 import com.testcase.CaseStudy.entities.concretes.Products;
 import com.testcase.CaseStudy.entities.dto.request.ProductRequestDTO;
 import com.testcase.CaseStudy.entities.dto.response.ProductResponseDTO;
@@ -18,10 +21,14 @@ import com.testcase.CaseStudy.entities.dto.response.ProductResponseDTO;
 @Service
 public class ProductManager implements ProductService{
 private ProductRepository productRepository;
-public ProductManager(ProductRepository productRepository) {
+private CategoryRepository categoryRepository;
+private CategoryManager categoryManager;
+public ProductManager(ProductRepository productRepository,CategoryRepository categoryRepository,CategoryManager categoryManager) {
 	
 
 	this.productRepository = productRepository;
+	this.categoryRepository=categoryRepository;
+	this.categoryManager=categoryManager;
 }
 
 public List<ProductResponseDTO> getAll() {
@@ -67,6 +74,15 @@ public ResponseEntity<?> deleteById(Long id) {
 }
 
 public ResponseEntity<?> deleteAll() {
+	List<Category> listCategory=categoryRepository.findAll();
+	List<Products> listProduct=productRepository.findAll();
+	for(int i=0;i<listCategory.size();i++)
+	{
+		for(int j=0;j<listProduct.size();j++)
+		{
+			categoryManager.deleteProductFromCategory(listCategory.get(i).getId(),listProduct.get(j).getId());
+		}
+	}
 	productRepository.deleteAll();
 	return ResponseEntity.ok().build();
 }

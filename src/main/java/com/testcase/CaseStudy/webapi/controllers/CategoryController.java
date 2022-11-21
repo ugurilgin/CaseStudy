@@ -19,6 +19,7 @@ import com.testcase.CaseStudy.business.abstracts.CategoryService;
 import com.testcase.CaseStudy.business.concretes.CategoryManager;
 import com.testcase.CaseStudy.entities.concretes.Products;
 import com.testcase.CaseStudy.entities.dto.request.CategoryRequestDTO;
+import com.testcase.CaseStudy.entities.dto.request.ProductRequestDTO;
 import com.testcase.CaseStudy.entities.dto.response.CategoryResponseDTO;
 
 @RestController
@@ -55,8 +56,9 @@ public class CategoryController implements CategoryService {
 	}
 
 	@PostMapping("/{id}/products")
-	public ResponseEntity<?> addProduct(@PathVariable Long id, @Valid @RequestBody Products newProduct) {
+	public ResponseEntity<?> addProduct(@PathVariable Long id, @Valid @RequestBody ProductRequestDTO newProduct) {
 		// TODO Auto-generated method stub
+		System.out.println("aa"+newProduct.getDesc());
 		return categoryManager.addProduct(id,newProduct);
 	}
 
