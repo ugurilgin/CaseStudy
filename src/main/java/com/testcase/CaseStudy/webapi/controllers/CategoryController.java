@@ -39,7 +39,6 @@ public class CategoryController implements CategoryService {
 
 	@GetMapping("/{id}/products")
 	public ResponseEntity<?> getAllProductsByCategoryId(@PathVariable Long id) {
-		
 		return categoryManager.getAllProductsByCategoryId(id);
 	}
 
@@ -50,38 +49,31 @@ public class CategoryController implements CategoryService {
 
 	@PostMapping
 	public CategoryResponseDTO create(@Valid @RequestBody CategoryRequestDTO newCategory) {
-		// TODO Auto-generated method stub
 		return categoryManager.create(newCategory);
 	}
 
 	@PostMapping("/{id}/products")
 	public ResponseEntity<?> addProduct(@PathVariable Long id, @Valid @RequestBody ProductRequestDTO newProduct) {
-		// TODO Auto-generated method stub
-		System.out.println("aa"+newProduct.getDesc());
 		return categoryManager.addProduct(id,newProduct);
 	}
 
 	@PutMapping("/{id}")
 	public CategoryResponseDTO update(@PathVariable Long id, @Valid @RequestBody CategoryRequestDTO newCategory) {
-		// TODO Auto-generated method stub
 		return categoryManager.update(id,newCategory);
 	}
 
 	@DeleteMapping("/{id}")
 	public ResponseEntity<?> deleteById(@PathVariable Long id) {
-		// TODO Auto-generated method stub
 		return categoryManager.deleteById(id);
 	}
 
 	@DeleteMapping("/{categoryId}/products/{productId}")
 	public ResponseEntity<?> deleteProductFromCategory(@PathVariable Long categoryId,@PathVariable Long productId) {
-		// TODO Auto-generated method stub
 		return categoryManager.deleteProductFromCategory(categoryId,productId);
 	}
 
 	@DeleteMapping("/all")
 	public ResponseEntity<?> deleteAll() {
-		// TODO Auto-generated method stub
 		return categoryManager.deleteAll();
 	}
 
