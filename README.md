@@ -1,1 +1,39 @@
 # CaseStudy
+* Spring Web
+* Validation
+* Mysql
+* Spring Boot
+* Hibernate
+# Postman Testleri
+* ![logo](/images/1.png)
+* ![logo](/images/2.png)
+* ![logo](/images/3.png)
+* ![logo](/images/4.png)
+* ![logo](/images/5.png)
+* ![logo](/images/6.png)
+* ![logo](/images/7.png)
+* ![logo](/images/8.png)
+* ![logo](/images/9.png)
+* ![logo](/images/10.png)
+* ![logo](/images/11.png)
+* ![logo](/images/12.png)
+* ![logo](/images/13.png)
+* ![logo](/images/14.png)
+* ![logo](/images/15.png)
+* ![logo](/images/16.png)
+* ![logo](/images/17.png)
+* ![logo](/images/18.png)
+* ![logo](/images/19.png)
+* ![logo](/images/20.png)
+* ![logo](/images/21.png)
+* ![logo](/images/22.png)
+* ![logo](/images/23.png)
+* ![logo](/images/24.png)
+* ![logo](/images/25.png)
+* ![logo](/images/26.png)
+* ![logo](/images/27.png)
+* ![logo](/images/28.png)
+* ![logo](/images/29.png)
+* ![logo](/images/30.png)
+* ![logo](/images/31.png)
+* ![logo](/images/32.png)
