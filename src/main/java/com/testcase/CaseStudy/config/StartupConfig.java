@@ -8,8 +8,8 @@ import org.springframework.stereotype.Component;
 
 import com.testcase.CaseStudy.dataAccess.repositories.CategoryRepository;
 import com.testcase.CaseStudy.dataAccess.repositories.ProductRepository;
-import com.testcase.CaseStudy.entites.concretes.Category;
-import com.testcase.CaseStudy.entites.concretes.Products;
+import com.testcase.CaseStudy.entities.concretes.Category;
+import com.testcase.CaseStudy.entities.concretes.Products;
 
 
 @Component

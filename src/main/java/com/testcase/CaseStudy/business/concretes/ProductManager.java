@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 import com.testcase.CaseStudy.business.abstracts.ProductService;
 import com.testcase.CaseStudy.core.exceptions.EntityNotFoundException;
 import com.testcase.CaseStudy.dataAccess.repositories.ProductRepository;
-import com.testcase.CaseStudy.entites.concretes.Products;
+import com.testcase.CaseStudy.entities.concretes.Products;
 import com.testcase.CaseStudy.entities.dto.request.ProductRequestDTO;
 import com.testcase.CaseStudy.entities.dto.response.ProductResponseDTO;
 

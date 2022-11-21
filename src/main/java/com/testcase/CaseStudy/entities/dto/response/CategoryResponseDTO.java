@@ -1,7 +1,7 @@
 package com.testcase.CaseStudy.entities.dto.response;
 
 
-import com.testcase.CaseStudy.entites.concretes.Category;
+import com.testcase.CaseStudy.entities.concretes.Category;
 
 public class CategoryResponseDTO {
 	

@@ -1,4 +1,4 @@
-package com.testcase.CaseStudy.entites.concretes;
+package com.testcase.CaseStudy.entities.concretes;
 
 import java.util.HashSet;
 import java.util.Set;

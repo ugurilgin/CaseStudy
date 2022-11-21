@@ -13,8 +13,8 @@ import com.testcase.CaseStudy.business.abstracts.CategoryService;
 import com.testcase.CaseStudy.core.exceptions.EntityNotFoundException;
 import com.testcase.CaseStudy.dataAccess.repositories.CategoryRepository;
 import com.testcase.CaseStudy.dataAccess.repositories.ProductRepository;
-import com.testcase.CaseStudy.entites.concretes.Category;
-import com.testcase.CaseStudy.entites.concretes.Products;
+import com.testcase.CaseStudy.entities.concretes.Category;
+import com.testcase.CaseStudy.entities.concretes.Products;
 import com.testcase.CaseStudy.entities.dto.request.CategoryRequestDTO;
 import com.testcase.CaseStudy.entities.dto.response.CategoryResponseDTO;
 
