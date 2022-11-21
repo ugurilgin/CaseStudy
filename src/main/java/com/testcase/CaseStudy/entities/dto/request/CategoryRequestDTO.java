@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
-import com.testcase.CaseStudy.core.entites.concretes.Products;
+import com.testcase.CaseStudy.entites.concretes.Products;
 
 public class CategoryRequestDTO {
 	@Id

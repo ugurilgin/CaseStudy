@@ -2,8 +2,8 @@ package com.testcase.CaseStudy.entities.dto.response;
 
 import java.util.List;
 
-import com.testcase.CaseStudy.core.entites.concretes.Category;
-import com.testcase.CaseStudy.core.entites.concretes.Products;
+import com.testcase.CaseStudy.entites.concretes.Category;
+import com.testcase.CaseStudy.entites.concretes.Products;
 
 public class ProductResponseDTO {
 	

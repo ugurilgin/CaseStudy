@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import org.springframework.stereotype.Repository;
 
-import com.testcase.CaseStudy.core.entites.concretes.Products;
+import com.testcase.CaseStudy.entites.concretes.Products;
 @Repository
 public interface ProductRepository extends JpaRepository<Products, Long> {
 

@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.testcase.CaseStudy.business.abstracts.CategoryService;
 import com.testcase.CaseStudy.business.concretes.CategoryManager;
-import com.testcase.CaseStudy.core.entites.concretes.Products;
+import com.testcase.CaseStudy.entites.concretes.Products;
 import com.testcase.CaseStudy.entities.dto.request.CategoryRequestDTO;
 import com.testcase.CaseStudy.entities.dto.response.CategoryResponseDTO;
 
