@@ -3,7 +3,6 @@ package com.testcase.CaseStudy.entities.dto.response;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.testcase.CaseStudy.entities.concretes.Category;
 import com.testcase.CaseStudy.entities.concretes.Products;
 
 public class ProductResponseDTO {

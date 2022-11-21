@@ -6,7 +6,6 @@ import javax.validation.Valid;
 
 import org.springframework.http.ResponseEntity;
 
-import com.testcase.CaseStudy.entities.concretes.Products;
 import com.testcase.CaseStudy.entities.dto.request.CategoryRequestDTO;
 import com.testcase.CaseStudy.entities.dto.request.ProductRequestDTO;
 import com.testcase.CaseStudy.entities.dto.response.CategoryResponseDTO;
