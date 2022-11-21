@@ -33,7 +33,6 @@ public class CategoryController implements CategoryService {
 
 	@GetMapping
 	public List<CategoryResponseDTO> getAll() {
-		
 		return categoryManager.getAll();
 	}
 
